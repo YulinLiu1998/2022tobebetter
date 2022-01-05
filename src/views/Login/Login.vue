@@ -62,7 +62,7 @@
               </span>
             </section>
             <section class="login_hint">
-              温馨提示：未注册硅谷外卖帐号的手机号，登录时将自动注册，且代表已同意
+              温馨提示：未注册硅谷外卖帐号的手机号，登录时将自动注册，且代表已同意对对对
               <a href="javascript:;">《用户服务协议》</a>
             </section>
           </div>
