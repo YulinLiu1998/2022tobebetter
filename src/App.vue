@@ -14,7 +14,7 @@ export default {
   },
   async mounted() {
     const result = await this.$API.autoLogin()
-    console.log('sdfsd', result)
+    console.log('sdfsd收拾收拾', result)
     this.$store.commit(RECEIVE_USER, result.data)
   }
 }
