@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
+    <footer-guide />
   </div>
 </template>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
-</style>
+<script>
+import FooterGuide from '@/components/FooterGuide.vue'
+import { RECEIVE_USER } from './store/mutation-types.js'
+export default {
+  components: {
+    FooterGuide
+  },
+  async mounted() {
+    const result = await this.$API.autoLogin()
+    console.log('sdfsd', result)
+    this.$store.commit(RECEIVE_USER, result.data)
+  }
+}
+</script>
+<style lang="stylus"></style>
